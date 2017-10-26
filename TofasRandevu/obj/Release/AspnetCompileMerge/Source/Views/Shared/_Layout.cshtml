@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fiat</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,600,700,800&subset=latin-ext" type="text/css">
+    @Styles.Render("~/Contents/css")
+    @RenderSection("styles", required: false)
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <div class="top-content">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2 form-box">
+                    @RenderBody()
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- Javascript -->
+    @Scripts.Render("~/Bundles/jquery")
+    @Scripts.Render("~/Bundles/bootstrap")
+    @Scripts.Render("~/Bundles/jqueryval")
+    @Scripts.Render("~/Bundles/mask")
+    @Scripts.Render("~/Bundles/scripts")
+    @RenderSection("scripts", required: false)
+    <!--[if lt IE 10]>
+        @Scripts.Render("~/Bundles/placeholder")
+    <![endif]-->
+</body>
+</html>

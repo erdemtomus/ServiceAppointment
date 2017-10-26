@@ -1,0 +1,172 @@
+﻿@model TofasRandevu.ViewModels.CustomerInformation
+@using BotDetect.Web.Mvc;
+
+@section Styles{
+    <link href="@BotDetect.Web.CaptchaUrls.Absolute.LayoutStyleSheetUrl"
+            rel="stylesheet" type="text/css" />
+    <style>
+        #CaptchaCode {
+            text-transform: none !important;
+        }
+    </style>
+}
+
+
+
+
+
+@using (Html.BeginForm("CustomerInformation", "CustomerAppointment", FormMethod.Post, new { id = "InformationForm", @class = "f1" }))
+{
+    @Html.AntiForgeryToken()
+    <h2>SERVİS RANDEVUSU</h2>
+    <div class="f1-steps">
+        <div class="f1-progress">
+            <div class="f1-progress-line" data-now-value="10" data-number-of-steps="4" style="width: 10%;"></div>
+        </div>
+        <div class="f1-step active">
+            <p>Kişisel Bilgilerin Girilmesi</p>
+            <div class="f1-step-icon">1</div>
+        </div>
+        <div class="f1-step">
+            <p>Randevu Tarihi ve Servis Seçimi</p>
+            <div class="f1-step-icon">2</div>
+        </div>
+        <div class="f1-step">
+            <p>Servis Danışmanı Seçimi</p>
+            <div class="f1-step-icon">3</div>
+        </div>
+        <div class="f1-step">
+            <p>Servis Bakım Detayları Girişi</p>
+            <div class="f1-step-icon">4</div>
+        </div>
+    </div>
+
+    <fieldset>
+        <h4>Kişisel Bilgilerin Girilmesi</h4>
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            <div class="form-group">
+                @Html.LabelFor(model => model.Name, new { @class = "sr-only" })
+                @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control", placeholder = HttpUtility.HtmlDecode(Html.DisplayNameFor(model => model.Name).ToHtmlString()) } })
+                @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.PhoneNumber, new { @class = "sr-only" })
+                @Html.EditorFor(model => model.PhoneNumber, new { htmlAttributes = new { style = "visibility: hidden;width:0px;height:0px;z-index:-1;position:absolute;" } })
+                @Html.TextBox("MaskedPhoneNumber", "", new { @class = "form-control", placeholder = HttpUtility.HtmlDecode(Html.DisplayNameFor(model => model.PhoneNumber).ToHtmlString()) })
+                @Html.ValidationMessageFor(model => model.PhoneNumber, "", new { @class = "text-danger" })
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.Email, new { @class = "sr-only" })
+                @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control", placeholder = HttpUtility.HtmlDecode(Html.DisplayNameFor(model => model.Email).ToHtmlString()) } })
+                @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.Plate, new { @class = "sr-only" })
+                @Html.EditorFor(model => model.Plate, new { htmlAttributes = new { @class = "form-control", style = "text-transform:uppercase", placeholder = HttpUtility.HtmlDecode(Html.DisplayNameFor(model => model.Plate).ToHtmlString()) } })
+                @Html.ValidationMessageFor(model => model.Plate, "", new { @class = "text-danger" })
+            </div>
+            
+            @{
+                if (ViewBag.PassedCaptcha != true)
+                {
+                    <div class="form-group">
+                        @Html.Label("Güvenlik Kodu", new { @class = "sr-only" })
+                        @Html.TextBox("CaptchaCode", "", new { @class = "form-control col-md-6", placeholder = "Güvenlik Kodu", style = "width: 50%;float: left;" })
+                        <div class="code">
+                            @Html.Captcha(TofasRandevu.Helpers.CaptchaHelper.GetExampleCaptcha(125, 25))
+                        </div>
+                        @Html.ValidationMessage("CaptchaCode", "", new { @class = "text-danger" })
+                    </div>
+                }
+            }
+            <div class="clearfix"></div>
+            <div class="checkbox">
+                @{
+                    if (ViewBag.AcceptDataPrivacy == false)
+                    {
+                        <label>
+                            @Html.EditorFor(model => model.AcceptDataPrivacy) Veri gizliliği yasası beyanını okudum ve bilgilerimin kaydedilmesini ve kullanılmasını kabul ediyorum.
+                        </label>
+                    }
+                }
+            </div>
+            @{
+                if (ViewBag.PlateCheckStatus == "NotFound")
+                {
+                    <div class="form-group">
+                        Plaka sistemde tanımlı değil. Lütfen kontrol edip tekrar deneyiniz...                        
+                    </div>
+                }
+            }
+            <div class="form-group f1-buttons">
+                    @{
+                        if (ViewBag.PlateCheckStatus == "Default")
+                        {
+                            <button id="AcceptButton" name="SubmitType" type="submit" value="ContinueWithCheck" class="btn btn-next">Devam</button>
+                        }
+                        else
+                        {
+                            <button id="AcceptButton" name="SubmitType" type="submit" value="Retry" class="btn btn-retry">Tekrar Dene</button>
+                            <button id="AcceptButton" name="SubmitType" type="submit" value="ContinueWithNoCheck" class="btn btn-next">Devam</button>
+                        }
+                    }
+            </div>
+    </fieldset>
+}
+
+@section Scripts {       
+        <script>
+            $(document).ready(function () {
+                var maskedPhoneNumber = $('#MaskedPhoneNumber');
+                var phoneNumber = $("#PhoneNumber");
+                var informationForm = $("#InformationForm");
+                var acceptButton = $("#AcceptButton");
+                @{
+                    if (Model != null)
+                    {
+                        <text>
+                maskedPhoneNumber.val(@Model.PhoneNumber);
+                </text>
+                    }
+                }
+                maskedPhoneNumber.mask('(000) 000-0000');
+                maskedPhoneNumber.change(function () {
+                    phoneNumber.val(maskedPhoneNumber.cleanVal());
+                    phoneNumber.valid();
+                });
+                acceptButton.click(function () {
+                    phoneNumber.val(maskedPhoneNumber.cleanVal());
+                    var form = informationForm.submit();
+                });
+
+                $('#InformationForm').on('submit', function (e) {
+
+                    // fields validation
+                    $(this).find('input[type="text"], input[type="checkbox"], input[type="password"], textarea, select').each(function () {
+
+                        if ($(this).is('input[type="checkbox"]')) {
+                            if (!$(this).is(':checked')) {
+                                $(".checkbox").css({ "color": "#BE255B" });
+                                e.preventDefault();
+                            } else {
+                                $(".checkbox").css({ "color": "" });
+                            }
+                        } else {
+                            if ($(this).val() == "") {
+                                $(this).addClass('input-error');
+                                e.preventDefault();
+                            }
+                            else {
+                                $(this).removeClass('input-error');
+                            }
+                        }
+                    });
+                });
+            });
+
+
+        </script>
+    }

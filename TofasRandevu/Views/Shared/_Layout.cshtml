@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fiat</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,600,700,800&subset=latin-ext" type="text/css">
+    <link rel="stylesheet" href="@Url.Action("/","/", null, Request.Url.Scheme)/assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="@Url.Action("/","/", null, Request.Url.Scheme)/assets/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="@Url.Action("/","/", null, Request.Url.Scheme)/assets/css/bootstrap-datetimepicker.css" />
+    <link rel="stylesheet" href="@Url.Action("/","/", null, Request.Url.Scheme)/assets/css/form-elements.css">
+    <link rel="stylesheet" href="@Url.Action("/","/", null, Request.Url.Scheme)/assets/css/style.css">
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    @RenderSection("styles", required: false)    
+</head>
+<body>
+    <div class="top-content">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2 form-box">
+                    @RenderBody()
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- Javascript -->
+    <script src="@Url.Action("/","/", null, Request.Url.Scheme)/assets/js/jquery-1.12.4.min.js"></script>
+    <script src="@Url.Action("/","/", null, Request.Url.Scheme)/assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="@Url.Action("/","/", null, Request.Url.Scheme)/assets/js/scripts.js"></script>
+    <script src="@Url.Action("/","/", null, Request.Url.Scheme)/assets/js/moment-with-locales.min.js"></script>
+    <script src="@Url.Action("/","/", null, Request.Url.Scheme)/assets/js//bootstrap-datetimepicker.min.js"></script>
+    <script src="@Url.Action("/","/", null, Request.Url.Scheme)/assets/js/bootstrap-toggle.min.js"></script>
+    <script src="@Url.Action("/","/", null, Request.Url.Scheme)/assets/js/jquery.validate.min.js"></script>
+    <script src="@Url.Action("/","/", null, Request.Url.Scheme)/assets/js/jquery.validate-vsdoc.js"></script>
+    <script src="@Url.Action("/","/", null, Request.Url.Scheme)/assets/js/jquery.validate.unobtrusive.min.js"></script>
+    <script src="@Url.Action("/","/", null, Request.Url.Scheme)/assets/js/jquery.mask.min.js"></script>
+    <!--[if lt IE 10]>
+        <script src="/assets/js/placeholder.js"></script>
+    <![endif]-->
+    @RenderSection("scripts", required: false)   
+</body>
+</html>

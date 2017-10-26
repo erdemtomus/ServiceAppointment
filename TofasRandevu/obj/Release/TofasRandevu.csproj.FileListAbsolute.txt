@@ -1,0 +1,116 @@
+D:\Projeler\IOSISDEPO\team_projects\trunk\TofasRandevu\TofasRandevu\bin\roslyn\csc.exe
+D:\Projeler\IOSISDEPO\team_projects\trunk\TofasRandevu\TofasRandevu\bin\roslyn\csc.exe.config
+D:\Projeler\IOSISDEPO\team_projects\trunk\TofasRandevu\TofasRandevu\bin\roslyn\csc.rsp
+D:\Projeler\IOSISDEPO\team_projects\trunk\TofasRandevu\TofasRandevu\bin\roslyn\csi.exe
+D:\Projeler\IOSISDEPO\team_projects\trunk\TofasRandevu\TofasRandevu\bin\roslyn\csi.rsp
+D:\Projeler\IOSISDEPO\team_projects\trunk\TofasRandevu\TofasRandevu\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Projeler\IOSISDEPO\team_projects\trunk\TofasRandevu\TofasRandevu\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Projeler\IOSISDEPO\team_projects\trunk\TofasRandevu\TofasRandevu\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\Projeler\IOSISDEPO\team_projects\trunk\TofasRandevu\TofasRandevu\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Projeler\IOSISDEPO\team_projects\trunk\TofasRandevu\TofasRandevu\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\Projeler\IOSISDEPO\team_projects\trunk\TofasRandevu\TofasRandevu\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Projeler\IOSISDEPO\team_projects\trunk\TofasRandevu\TofasRandevu\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Projeler\IOSISDEPO\team_projects\trunk\TofasRandevu\TofasRandevu\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\Projeler\IOSISDEPO\team_projects\trunk\TofasRandevu\TofasRandevu\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\Projeler\IOSISDEPO\team_projects\trunk\TofasRandevu\TofasRandevu\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Projeler\IOSISDEPO\team_projects\trunk\TofasRandevu\TofasRandevu\bin\roslyn\System.AppContext.dll
+D:\Projeler\IOSISDEPO\team_projects\trunk\TofasRandevu\TofasRandevu\bin\roslyn\System.Collections.Immutable.dll
+D:\Projeler\IOSISDEPO\team_projects\trunk\TofasRandevu\TofasRandevu\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\Projeler\IOSISDEPO\team_projects\trunk\TofasRandevu\TofasRandevu\bin\roslyn\System.IO.FileSystem.dll
+D:\Projeler\IOSISDEPO\team_projects\trunk\TofasRandevu\TofasRandevu\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\Projeler\IOSISDEPO\team_projects\trunk\TofasRandevu\TofasRandevu\bin\roslyn\System.Reflection.Metadata.dll
+D:\Projeler\IOSISDEPO\team_projects\trunk\TofasRandevu\TofasRandevu\bin\roslyn\vbc.exe
+D:\Projeler\IOSISDEPO\team_projects\trunk\TofasRandevu\TofasRandevu\bin\roslyn\vbc.exe.config
+D:\Projeler\IOSISDEPO\team_projects\trunk\TofasRandevu\TofasRandevu\bin\roslyn\vbc.rsp
+D:\Projeler\IOSISDEPO\team_projects\trunk\TofasRandevu\TofasRandevu\bin\roslyn\VBCSCompiler.exe
+D:\Projeler\IOSISDEPO\team_projects\trunk\TofasRandevu\TofasRandevu\bin\roslyn\VBCSCompiler.exe.config
+D:\Projeler\IOSISDEPO\team_projects\trunk\TofasRandevu\TofasRandevu\bin\TofasRandevu.dll.config
+D:\Projeler\IOSISDEPO\team_projects\trunk\TofasRandevu\TofasRandevu\bin\TofasRandevu.dll
+D:\Projeler\IOSISDEPO\team_projects\trunk\TofasRandevu\TofasRandevu\bin\TofasRandevu.pdb
+D:\Projeler\IOSISDEPO\team_projects\trunk\TofasRandevu\TofasRandevu\bin\Antlr3.Runtime.dll
+D:\Projeler\IOSISDEPO\team_projects\trunk\TofasRandevu\TofasRandevu\bin\BotDetect.dll
+D:\Projeler\IOSISDEPO\team_projects\trunk\TofasRandevu\TofasRandevu\bin\BotDetect.Web.Mvc.dll
+D:\Projeler\IOSISDEPO\team_projects\trunk\TofasRandevu\TofasRandevu\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Projeler\IOSISDEPO\team_projects\trunk\TofasRandevu\TofasRandevu\bin\Microsoft.Web.Infrastructure.dll
+D:\Projeler\IOSISDEPO\team_projects\trunk\TofasRandevu\TofasRandevu\bin\Newtonsoft.Json.dll
+D:\Projeler\IOSISDEPO\team_projects\trunk\TofasRandevu\TofasRandevu\bin\System.Net.Http.Formatting.dll
+D:\Projeler\IOSISDEPO\team_projects\trunk\TofasRandevu\TofasRandevu\bin\System.Web.Helpers.dll
+D:\Projeler\IOSISDEPO\team_projects\trunk\TofasRandevu\TofasRandevu\bin\System.Web.Mvc.dll
+D:\Projeler\IOSISDEPO\team_projects\trunk\TofasRandevu\TofasRandevu\bin\System.Web.Optimization.dll
+D:\Projeler\IOSISDEPO\team_projects\trunk\TofasRandevu\TofasRandevu\bin\System.Web.Razor.dll
+D:\Projeler\IOSISDEPO\team_projects\trunk\TofasRandevu\TofasRandevu\bin\System.Web.WebPages.Deployment.dll
+D:\Projeler\IOSISDEPO\team_projects\trunk\TofasRandevu\TofasRandevu\bin\System.Web.WebPages.dll
+D:\Projeler\IOSISDEPO\team_projects\trunk\TofasRandevu\TofasRandevu\bin\System.Web.WebPages.Razor.dll
+D:\Projeler\IOSISDEPO\team_projects\trunk\TofasRandevu\TofasRandevu\bin\WebGrease.dll
+D:\Projeler\IOSISDEPO\team_projects\trunk\TofasRandevu\TofasRandevu\bin\Antlr3.Runtime.pdb
+D:\Projeler\IOSISDEPO\team_projects\trunk\TofasRandevu\TofasRandevu\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Projeler\IOSISDEPO\team_projects\trunk\TofasRandevu\TofasRandevu\bin\Newtonsoft.Json.xml
+D:\Projeler\IOSISDEPO\team_projects\trunk\TofasRandevu\TofasRandevu\bin\System.Net.Http.Formatting.xml
+D:\Projeler\IOSISDEPO\team_projects\trunk\TofasRandevu\TofasRandevu\bin\System.Web.Helpers.xml
+D:\Projeler\IOSISDEPO\team_projects\trunk\TofasRandevu\TofasRandevu\bin\System.Web.Mvc.xml
+D:\Projeler\IOSISDEPO\team_projects\trunk\TofasRandevu\TofasRandevu\bin\System.Web.Optimization.xml
+D:\Projeler\IOSISDEPO\team_projects\trunk\TofasRandevu\TofasRandevu\bin\System.Web.Razor.xml
+D:\Projeler\IOSISDEPO\team_projects\trunk\TofasRandevu\TofasRandevu\bin\System.Web.WebPages.xml
+D:\Projeler\IOSISDEPO\team_projects\trunk\TofasRandevu\TofasRandevu\bin\System.Web.WebPages.Deployment.xml
+D:\Projeler\IOSISDEPO\team_projects\trunk\TofasRandevu\TofasRandevu\bin\System.Web.WebPages.Razor.xml
+D:\Projeler\IOSISDEPO\team_projects\trunk\TofasRandevu\TofasRandevu\obj\Release\TofasRandevu.csprojResolveAssemblyReference.cache
+D:\Projeler\IOSISDEPO\team_projects\trunk\TofasRandevu\TofasRandevu\obj\Release\TofasRandevu.dll
+D:\Projeler\IOSISDEPO\team_projects\trunk\TofasRandevu\TofasRandevu\obj\Release\TofasRandevu.pdb
+D:\Workspace\Fiat Team Projects\TofasRandevu3\TofasRandevu\bin\roslyn\csc.exe
+D:\Workspace\Fiat Team Projects\TofasRandevu3\TofasRandevu\bin\roslyn\csc.exe.config
+D:\Workspace\Fiat Team Projects\TofasRandevu3\TofasRandevu\bin\roslyn\csc.rsp
+D:\Workspace\Fiat Team Projects\TofasRandevu3\TofasRandevu\bin\roslyn\csi.exe
+D:\Workspace\Fiat Team Projects\TofasRandevu3\TofasRandevu\bin\roslyn\csi.rsp
+D:\Workspace\Fiat Team Projects\TofasRandevu3\TofasRandevu\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Workspace\Fiat Team Projects\TofasRandevu3\TofasRandevu\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Workspace\Fiat Team Projects\TofasRandevu3\TofasRandevu\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\Workspace\Fiat Team Projects\TofasRandevu3\TofasRandevu\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Workspace\Fiat Team Projects\TofasRandevu3\TofasRandevu\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\Workspace\Fiat Team Projects\TofasRandevu3\TofasRandevu\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Workspace\Fiat Team Projects\TofasRandevu3\TofasRandevu\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Workspace\Fiat Team Projects\TofasRandevu3\TofasRandevu\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\Workspace\Fiat Team Projects\TofasRandevu3\TofasRandevu\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\Workspace\Fiat Team Projects\TofasRandevu3\TofasRandevu\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Workspace\Fiat Team Projects\TofasRandevu3\TofasRandevu\bin\roslyn\System.AppContext.dll
+D:\Workspace\Fiat Team Projects\TofasRandevu3\TofasRandevu\bin\roslyn\System.Collections.Immutable.dll
+D:\Workspace\Fiat Team Projects\TofasRandevu3\TofasRandevu\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\Workspace\Fiat Team Projects\TofasRandevu3\TofasRandevu\bin\roslyn\System.IO.FileSystem.dll
+D:\Workspace\Fiat Team Projects\TofasRandevu3\TofasRandevu\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\Workspace\Fiat Team Projects\TofasRandevu3\TofasRandevu\bin\roslyn\System.Reflection.Metadata.dll
+D:\Workspace\Fiat Team Projects\TofasRandevu3\TofasRandevu\bin\roslyn\vbc.exe
+D:\Workspace\Fiat Team Projects\TofasRandevu3\TofasRandevu\bin\roslyn\vbc.exe.config
+D:\Workspace\Fiat Team Projects\TofasRandevu3\TofasRandevu\bin\roslyn\vbc.rsp
+D:\Workspace\Fiat Team Projects\TofasRandevu3\TofasRandevu\bin\roslyn\VBCSCompiler.exe
+D:\Workspace\Fiat Team Projects\TofasRandevu3\TofasRandevu\bin\roslyn\VBCSCompiler.exe.config
+D:\Workspace\Fiat Team Projects\TofasRandevu3\TofasRandevu\bin\TofasRandevu.dll.config
+D:\Workspace\Fiat Team Projects\TofasRandevu3\TofasRandevu\bin\TofasRandevu.dll
+D:\Workspace\Fiat Team Projects\TofasRandevu3\TofasRandevu\bin\TofasRandevu.pdb
+D:\Workspace\Fiat Team Projects\TofasRandevu3\TofasRandevu\bin\Antlr3.Runtime.dll
+D:\Workspace\Fiat Team Projects\TofasRandevu3\TofasRandevu\bin\BotDetect.dll
+D:\Workspace\Fiat Team Projects\TofasRandevu3\TofasRandevu\bin\BotDetect.Web.Mvc.dll
+D:\Workspace\Fiat Team Projects\TofasRandevu3\TofasRandevu\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Workspace\Fiat Team Projects\TofasRandevu3\TofasRandevu\bin\Microsoft.Web.Infrastructure.dll
+D:\Workspace\Fiat Team Projects\TofasRandevu3\TofasRandevu\bin\Newtonsoft.Json.dll
+D:\Workspace\Fiat Team Projects\TofasRandevu3\TofasRandevu\bin\System.Net.Http.Formatting.dll
+D:\Workspace\Fiat Team Projects\TofasRandevu3\TofasRandevu\bin\System.Web.Helpers.dll
+D:\Workspace\Fiat Team Projects\TofasRandevu3\TofasRandevu\bin\System.Web.Mvc.dll
+D:\Workspace\Fiat Team Projects\TofasRandevu3\TofasRandevu\bin\System.Web.Optimization.dll
+D:\Workspace\Fiat Team Projects\TofasRandevu3\TofasRandevu\bin\System.Web.Razor.dll
+D:\Workspace\Fiat Team Projects\TofasRandevu3\TofasRandevu\bin\System.Web.WebPages.Deployment.dll
+D:\Workspace\Fiat Team Projects\TofasRandevu3\TofasRandevu\bin\System.Web.WebPages.dll
+D:\Workspace\Fiat Team Projects\TofasRandevu3\TofasRandevu\bin\System.Web.WebPages.Razor.dll
+D:\Workspace\Fiat Team Projects\TofasRandevu3\TofasRandevu\bin\WebGrease.dll
+D:\Workspace\Fiat Team Projects\TofasRandevu3\TofasRandevu\bin\Antlr3.Runtime.pdb
+D:\Workspace\Fiat Team Projects\TofasRandevu3\TofasRandevu\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Workspace\Fiat Team Projects\TofasRandevu3\TofasRandevu\bin\Newtonsoft.Json.xml
+D:\Workspace\Fiat Team Projects\TofasRandevu3\TofasRandevu\bin\System.Net.Http.Formatting.xml
+D:\Workspace\Fiat Team Projects\TofasRandevu3\TofasRandevu\bin\System.Web.Helpers.xml
+D:\Workspace\Fiat Team Projects\TofasRandevu3\TofasRandevu\bin\System.Web.Mvc.xml
+D:\Workspace\Fiat Team Projects\TofasRandevu3\TofasRandevu\bin\System.Web.Optimization.xml
+D:\Workspace\Fiat Team Projects\TofasRandevu3\TofasRandevu\bin\System.Web.Razor.xml
+D:\Workspace\Fiat Team Projects\TofasRandevu3\TofasRandevu\bin\System.Web.WebPages.xml
+D:\Workspace\Fiat Team Projects\TofasRandevu3\TofasRandevu\bin\System.Web.WebPages.Deployment.xml
+D:\Workspace\Fiat Team Projects\TofasRandevu3\TofasRandevu\bin\System.Web.WebPages.Razor.xml
+D:\Workspace\Fiat Team Projects\TofasRandevu3\TofasRandevu\obj\Release\TofasRandevu.csprojResolveAssemblyReference.cache
+D:\Workspace\Fiat Team Projects\TofasRandevu3\TofasRandevu\obj\Release\TofasRandevu.dll
+D:\Workspace\Fiat Team Projects\TofasRandevu3\TofasRandevu\obj\Release\TofasRandevu.pdb

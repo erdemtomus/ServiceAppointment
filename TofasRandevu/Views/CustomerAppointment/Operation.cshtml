@@ -1,0 +1,113 @@
+﻿@model TofasRandevu.ViewModels.OperationInformation
+
+
+
+
+@using (Html.BeginForm("Operation", "CustomerAppointment", FormMethod.Post, new { id="operationForm", @class = "f1" }))
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    <h2>SERVİS RANDEVUSU</h2>
+    <div class="f1-steps">
+        <div class="f1-progress">
+            <div class="f1-progress-line" data-now-value="85" data-number-of-steps="4" style="width: 85%;"></div>
+        </div>
+        <div class="f1-step active">
+            <p>Kişisel Bilgilerin Girilmesi</p>
+            <div class="f1-step-icon">1</div>
+        </div>
+        <div class="f1-step active">
+            <p>Randevu Tarihi ve Servis Seçimi</p>
+            <div class="f1-step-icon">2</div>
+        </div>
+        <div class="f1-step active">
+            <p>Servis Danışmanı Seçimi</p>
+            <div class="f1-step-icon">3</div>
+        </div>
+        <div class="f1-step active">
+            <p>Servis Bakım Detayları Girişi</p>
+            <div class="f1-step-icon">4</div>
+        </div>
+    </div>
+    <fieldset>
+        <h4>Kişisel Bilgilerin Girilmesi</h4>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Brand, new { @class = "sr-only" })
+            @Html.DropDownListFor(model => model.Brand, (SelectList)ViewBag.BrandList, "Fiat", new { @class = "form-control", placeholder = "Fiat", @readonly = "readonly", disabled = "disabled" })
+            @Html.ValidationMessageFor(model => model.Brand, "", new { @class = "text-danger" })
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Model, new { @class = "sr-only" })
+            @Html.DropDownListFor(model => model.Model, (SelectList)ViewBag.ModelList, HttpUtility.HtmlDecode(Html.DisplayNameFor(model => model.Model).ToHtmlString()), new {  @class = "form-control", placeholder = HttpUtility.HtmlDecode(Html.DisplayNameFor(model => model.Model).ToHtmlString()) })
+            @Html.ValidationMessageFor(model => model.Model, "", new { @class = "text-danger" })
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Definition1, new { @class = "sr-only" })
+            @Html.DropDownListFor(model => model.Definition1, (SelectList)ViewBag.DefinitionList, HttpUtility.HtmlDecode(Html.DisplayNameFor(model => model.Definition1).ToHtmlString()), new { @class = "form-control", placeholder = HttpUtility.HtmlDecode(Html.DisplayNameFor(model => model.Definition1).ToHtmlString()) })
+            @Html.ValidationMessageFor(model => model.Definition1, "", new { @class = "text-danger" })
+        </div>       
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.VehicleKM, htmlAttributes: new { @class = "sr-only" })
+            @Html.EditorFor(model => model.VehicleKM, new { htmlAttributes = new { @class = "form-control", placeholder = HttpUtility.HtmlDecode(Html.DisplayNameFor(model => model.VehicleKM).ToHtmlString()) } })
+            @Html.ValidationMessageFor(model => model.VehicleKM, "", new { @class = "text-danger" })
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Definition2, htmlAttributes: new { @class = "sr-only" })
+            @Html.EditorFor(model => model.Definition2, new { htmlAttributes = new { @class = "form-control", placeholder = HttpUtility.HtmlDecode(Html.DisplayNameFor(model => model.Definition2).ToHtmlString()) } })
+            @Html.ValidationMessageFor(model => model.Definition2, "", new { @class = "text-danger" })
+        </div>
+
+        <div class="form-group">
+            <label class="checkbox-inline">
+                Ulaşım İhtiyacınız Var mı? @Html.EditorFor(model => model.NeedTransportation)
+            </label>
+        </div>
+
+        <div class="form-group">
+            <label class="checkbox-inline">
+                Arıza Işığı Yanıyor mu? @Html.EditorFor(model => model.FailureWarning)
+            </label>
+        </div> 
+
+        <div class="form-group">
+            <img src="@Url.Action("/", "/", null, Request.Url.Scheme)/assets/img/ico1.png" alt="">
+            <img src="@Url.Action("/", "/", null, Request.Url.Scheme)/assets/img/ico2.png" alt="">
+            <img src="@Url.Action("/", "/", null, Request.Url.Scheme)/assets/img/ico4.png" alt="">
+            <img src="@Url.Action("/", "/", null, Request.Url.Scheme)/assets/img/ico5.png" alt="">
+            <img src="@Url.Action("/", "/", null, Request.Url.Scheme)/assets/img/ico3.png" alt="">
+        </div>
+
+        <div class="f1-buttons">
+            <button id="submitButton" type="submit" class="btn btn-next">Submit</button>
+        </div>
+    </fieldset>
+}
+
+@section Scripts{
+
+
+
+    <script>
+        $(document).ready(function () {
+
+            $('#NeedTransportation').bootstrapToggle({
+                on: 'Evet',
+                off: 'Hayır',
+                onstyle: 'dton',
+                offstyle: 'dtoff'
+            });
+            $('#FailureWarning').bootstrapToggle({
+                on: 'Evet',
+                off: 'Hayır',
+                onstyle: 'dton',
+                offstyle: 'dtoff'
+            });
+        });
+    </script>
+}
+

@@ -1,0 +1,238 @@
+﻿@model TofasRandevu.ViewModels.ScheduleDate
+
+
+@using (Html.BeginForm("Schedule", "CustomerAppointment", FormMethod.Get, new { id = "ScheduleDateForm", @class = "f1" }))
+{
+    <h2>SERVİS RANDEVUSU</h2>
+    <div class="f1-steps">
+        <div class="f1-progress">
+            <div class="f1-progress-line" data-now-value="60" data-number-of-steps="4" style="width: 60%;"></div>
+        </div>
+        <div class="f1-step active">
+            <p>Kişisel Bilgilerin Girilmesi</p>
+            <div class="f1-step-icon">1</div>
+        </div>
+        <div class="f1-step active">
+            <p>Randevu Tarihi ve Servis Seçimi</p>
+            <div class="f1-step-icon">2</div>
+        </div>
+        <div class="f1-step active">
+            <p>Servis Danışmanı Seçimi</p>
+            <div class="f1-step-icon">3</div>
+        </div>
+        <div class="f1-step">
+            <p>Servis Bakım Detayları Girişi</p>
+            <div class="f1-step-icon">4</div>
+        </div>
+    </div>
+
+    <fieldset>
+        <h4>Servis Danışmanı Seçimi</h4>
+        <div class="form-group">
+            <div class="input-group" id="dateTime">
+                @Html.EditorFor(model => model.Date, new { htmlAttributes = new { @class = "form-control", placeholder = HttpUtility.HtmlDecode(Html.DisplayNameFor(model => model.Date).ToHtmlString()) } })
+                <span class="input-group-addon">
+                    <span class="fa fa-calendar">
+                    </span>
+                </span>
+            </div>
+        </div>
+
+        <table class="table table-condensed table-responsive">
+            <thead>
+                <tr>
+                    <th>&nbsp;</th>
+                    @{
+    foreach (var representative in ViewBag.Representatives)
+    {
+        <th>@representative.Name  @representative.Surname</th>
+    }
+                    }
+                </tr>
+            </thead>
+            <tbody>
+                @{
+    int count = 0;
+    foreach (var date in ViewBag.Periods)
+    {
+        <tr>
+
+            <td>@date.ToString("HH:mm")</td>
+
+            @{
+        foreach (var representative in ViewBag.Representatives)
+        {
+            if (((IEnumerable<TofasRandevu.Models.Appointment>)ViewBag.Schedules).Where(x => x.AppointmentDate == date.ToString("yyyyMMddHHmm") && x.PersonalCode == representative.PersonalCode).Count() == 0)
+            {
+                <td class="emptyDate" date="@date.ToString("yyyyMMddHHmm")" representative="@representative.PersonalCode" representativename="@representative.Name  @representative.Surname">&nbsp;</td>
+            }
+            else
+            {
+                <td class="actived">&nbsp;</td>
+            }
+        }
+            }
+        </tr>
+    }
+                }
+            </tbody>
+        </table>
+
+        <div class="f1-buttons">
+            <button id="submitButton" type="button" class="btn btn-next">İleri</button>
+        </div>
+    </fieldset>
+}
+@section Scripts {
+    <script>
+        var cmpCode = '@ViewBag.CompanyCode';
+        var dateToday = new Date();
+        var currentDate;
+        var currentPersCode;
+        var currentPersName;
+        var currentTd;
+
+
+        function tdClick(e) {
+            $(".emptyDate").unbind('click', tdClick);
+            var td = $(this);
+            var date = td.attr("date");
+            var persCode = td.attr("representative");
+            var persName = td.attr("representativeName");
+
+            if (currentDate != null && currentPersCode != null) {
+                var r0 = confirm("Önceden almış olduğunuz randevu iptal edilip seçmiş olduğunuz randevu alınacaktır. Emin misiniz ?");
+                if (r0 == false) {
+                    $(".emptyDate").bind('click', tdClick);
+                    $(".selected").unbind('click', tdClick);
+                    return;
+                }
+                var urlDeleteReserve = '@Url.Action("DeleteReserve", "Appointment", null, Request.Url.Scheme)/' + cmpCode + '/' + currentPersCode + '/' + currentDate + "/@Session["rezervationId"]";
+                $.getJSON(urlDeleteReserve, function (result) {
+                    if (result == false) {
+                    }
+                    else {
+                        currentTd.removeClass("selected");
+                        currentTd.addClass("emptyDate");
+                        currentDate = null;
+                        currentPersCode = null;
+                        currentPersName = null;
+                        currentTd = null;
+                        var urlReserve = '@Url.Action("Reserve", "Appointment", null, Request.Url.Scheme)/' + cmpCode + '/' + persCode + '/' + date + "/@Session["rezervationId"]";
+                        $.getJSON(urlReserve, function (result) {
+                            if (result == false) {
+                                td.addClass("actived");
+                                td.removeClass("emptyDate");
+                                td.unbind('click', tdClick);
+                                $(".emptyDate").bind('click', tdClick);
+                                alert("Rezerve edilmiş.");
+                            }
+                            else {
+                                td.addClass("selected");
+                                td.removeClass("emptyDate");
+                                td.unbind('click', tdClick);
+                                $(".emptyDate").bind('click', tdClick);
+                                currentDate = date;
+                                currentPersCode = persCode;
+                                currentPersName = persName;
+                                currentTd = td;
+                            }
+                        });
+                    }
+                });
+            }
+            else {
+                var r0 = confirm("Randevu alınacaktır. Emin misiniz ?");
+                if (r0 == false) {
+                    $(".emptyDate").bind('click', tdClick);
+                    $(".selected").unbind('click', tdClick);
+                    return;
+                }
+                var urlReserve = '@Url.Action("Reserve", "Appointment", null, Request.Url.Scheme)/' + cmpCode + '/' + persCode + '/' + date + "/@Session["rezervationId"]";
+                $.getJSON(urlReserve, function (result) {
+                    if (result == false) {
+                        td.addClass("actived");
+                        td.removeClass("emptyDate");
+                        td.unbind('click', tdClick);
+                        $(".emptyDate").bind('click', tdClick);
+                        alert("Rezerve edilmiş.");
+                    }
+                    else {
+                        td.addClass("selected");
+                        td.removeClass("emptyDate");
+                        td.unbind('click', tdClick);
+                        $(".emptyDate").bind('click', tdClick);
+                        currentDate = date;
+                        currentPersCode = persCode;
+                        currentPersName = persName;
+                        currentTd = td;
+                    }
+                });
+            }
+        };
+
+
+
+        $(document).ready(function () {
+            $(".emptyDate").bind('click', tdClick);
+
+            var startDate = new Date();
+            startDate.setDate(startDate.getDate() + 1);
+            $('#dateTime').datetimepicker({
+                daysOfWeekDisabled: [0, 7],
+                minDate: startDate,
+                format: 'DD.MM.YYYY',
+                locale: 'tr',
+                icons: {
+                    time: "fa fa-clock-o",
+                    date: "fa fa-calendar",
+                    up: "fa fa-arrow-up",
+                    down: "fa fa-arrow-down"
+                }
+            });
+
+            $("#dateTime").on("dp.change", function (e) {
+                var dateVal = $("#dateTime").find("input").val();
+                var form = document.createElement('form');
+                form.method = 'GET';
+                form.action = '@Url.Action("Schedule", "CustomerAppointment", null, Request.Url.Scheme)';
+
+                var dateInput = document.createElement('input');
+                dateInput.name = 'Date';
+                dateInput.value = dateVal;
+                form.appendChild(dateInput);
+
+                form.submit();
+            });
+
+            $("#submitButton").click(function () {
+                if (currentDate == null || currentPersCode == null) {
+                    alert("Randevu seçilmek zorundadır.");
+                    return;
+                }
+                var form = document.createElement('form');
+                form.method = 'POST';
+                form.action = '@Url.Action("Schedule", "CustomerAppointment", null, Request.Url.Scheme)';
+
+                var personalCodeInput = document.createElement('input');
+                personalCodeInput.name = 'personalCode';
+                personalCodeInput.value = currentPersCode;
+                form.appendChild(personalCodeInput);
+
+                var personalNameInput = document.createElement('input');
+                personalNameInput.name = 'personalName';
+                personalNameInput.value = currentPersName;
+                form.appendChild(personalNameInput);
+
+                var dateInput = document.createElement('input');
+                dateInput.name = 'date';
+                dateInput.value = currentDate;
+                form.appendChild(dateInput);
+
+                document.body.appendChild(form);
+                form.submit();
+                document.body.removeChild(form);
+            });
+        });
+    </script>
+}
